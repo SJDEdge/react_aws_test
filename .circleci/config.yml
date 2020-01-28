@@ -43,7 +43,8 @@ jobs:
       - aws-s3/sync:
           from: build
           to: 's3://edge-fe-react-aws-test/'
-          arguments: |
+          aws-region:
+          arguments: 'US West'
             --acl public-read \
             --cache-control "max-age=86400"
           overwrite: true
